@@ -1,0 +1,50 @@
+
+:root{
+	--montserrat: 'Montserrat', sans-serif;
+	--pacifico: 'Pacifico', cursive;
+}
+
+body{
+  font-family: var(--montserrat);
+}
+
+nav {
+  margin-bottom: 24px;
+}
+
+.nav-item p{
+  margin-bottom: 0px;
+}
+
+.nav-item p:hover{
+  cursor: pointer;
+}
+
+.form-control{
+  display: inline-block;
+  width: auto;
+}
+
+#adicionar{
+  margin-bottom: 20px;
+}
+
+.form-adicionar{
+  margin-bottom: 40px;
+}
+
+.section-title{
+  font-family: var(--montserrat);
+}
+
+.movie-title{
+  font-family: var(--pacifico);
+}
+
+.movie-div:hover{
+  cursor: pointer;
+}
+
+.movie-div:hover p{
+  color: #4C8577;
+}
