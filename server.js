@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require("dotenv").config();
 
 const movies = require('./routes/api/movies');
 
@@ -22,6 +23,18 @@ mongoose.connect(db, { useNewUrlParser: true })
 //Use routes
 app.use('/api/movies', movies);
 
-const port = 5000;
+const port = process.env.PORT || 5000;
+
+// ... other imports 
+const path = require("path")
+
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+// ...
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
