@@ -2,6 +2,7 @@
 :root{
 	--montserrat: 'Montserrat', sans-serif;
 	--pacifico: 'Pacifico', cursive;
+	--nunito: 'Nunito', sans-serif;
 }
 
 body{
@@ -38,7 +39,7 @@ nav {
 }
 
 .movie-title{
-  font-family: var(--pacifico);
+  font-family: var(--nunito);
 }
 
 .movie-div:hover{
