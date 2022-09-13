@@ -5,7 +5,7 @@ export function getDataFromIMDB(searchString){
 
     const api_key = '&apikey=45fdbed3&type=movie';
 
-    let url = 'http://www.omdbapi.com/?s=';
+    let url = 'https://www.omdbapi.com/?s=';
 
     let fullURL = url + searchString.replace(" ", "+") + api_key;
 
